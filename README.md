@@ -75,5 +75,5 @@ Ensure you have the following installed:
 ### Installation
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/solv-repo/post-management-app.git
-   cd post-management-app
+   git clone https://github.com/1moses1/solv-app.git
+   cd solv-app
