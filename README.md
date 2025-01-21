@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Post Management App
 
-## Getting Started
+The **Post Management App** is a modern and fully responsive web application built using **Next.js**. It demonstrates the implementation of CRUD (Create, Read, Update, Delete) operations with integration to the **JSONPlaceholder API**, accompanied by features like pagination, search/filter, form validation, and dynamic updates.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Core Functionalities
+1. **Post List Table**
+   - Fetches posts via `[GET] https://jsonplaceholder.typicode.com/posts`.
+   - Displays posts in a tabular format with columns for:
+     - **ID**, **Title**, **Actions** (Edit/Delete).
+   - Includes:
+     - **Search/Filter**: Dynamically filter posts by title.
+     - **Pagination**: View posts in batches.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Create Post Form**
+   - Creates new posts using `[POST] https://jsonplaceholder.typicode.com/posts`.
+   - Input fields:
+     - **Title**: Required text input.
+     - **Body**: Required textarea input.
+   - Validates form fields before submission.
+   - Reflects new posts instantly in the table.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Edit Post Form**
+   - Fetches data of a specific post using `[GET] https://jsonplaceholder.typicode.com/posts/{id}`.
+   - Updates post data via `[PUT] https://jsonplaceholder.typicode.com/posts/{id}`.
+   - Pre-fills form with existing post data for editing.
+   - Updates post list dynamically after successful edits.
 
-## Learn More
+4. **Delete Post**
+   - Deletes posts using `[DELETE] https://jsonplaceholder.typicode.com/posts/{id}`.
+   - Optimistically removes deleted posts from the table.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Additional Features
+- **Search/Filter**:
+  - Dynamically filters posts based on the title input.
+- **Pagination**:
+  - Custom pagination ensures seamless navigation through posts.
+- **Responsive Design**:
+  - The application is optimized for both desktop and mobile devices.
+- **Dynamic Sidebar**:
+  - Sidebar with icons for navigation:
+    - **Overview**: Dashboard icon.
+    - **Posts**: Document icon.
+  - Sidebar is collapsible with smooth transitions.
+- **Header**:
+  - Includes breadcrumb navigation (`Solv > Posts` on post-related pages).
+  - Displays icons for notifications and user profile.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Technologies Used
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Next.js**: Framework for server-side rendering and routing.
+- **React**: Library for building interactive UIs.
+- **Tailwind CSS**: Utility-first framework for styling.
+- **Axios**: HTTP client for API integration.
+- **Font Awesome**: Icon library for visual elements.
+- **Jest + React Testing Library**: Testing tools for robust unit tests.
+- **JSONPlaceholder**: Free REST API for backend simulation.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Setup Instructions
+
+### Prerequisites
+Ensure you have the following installed:
+- **Node.js** (v16+ recommended)
+- **npm** or **yarn**
+
+### Installation
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/solv-repo/post-management-app.git
+   cd post-management-app
