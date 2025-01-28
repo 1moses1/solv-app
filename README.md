@@ -75,5 +75,21 @@ Ensure you have the following installed:
 ### Installation
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/solv-repo/post-management-app.git
-   cd post-management-app
+   git clone https://github.com/1moses1/solv-app.git
+   cd solv-app
+2. **Run the Development Server**:
+   ```bash
+   npm install
+3. **Or, if you use Yarn**:
+   ```bash
+   npm run dev
+4. **Or, for Yarn**:
+   ```bash
+   yarn dev
+5. **Open the Application**:
+   ```bash
+   Navigate to http://localhost:3000
+6. **Run Tests**:
+   ```bash
+   npm run test
+
